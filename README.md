@@ -1,6 +1,6 @@
 # Static Markdown blog
 
-This is a group project, were we create a static blog.That will utilize markdown files for blog posts.
+This is a group project, were we create a static blog. That will utilize markdown files for blog posts.
 
 ## Usage
 
