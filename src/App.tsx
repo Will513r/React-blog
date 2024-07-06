@@ -1,22 +1,9 @@
-import { useState } from "react";
-import "./App.css";
+import { Header } from "./components/Header";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-    <>
-      <div>
-        <img src="/underdog.jpg"></img>
-      </div>
-      <h1 className="text-7xl">Frontend Blog</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          If your bored click this the count is {count}
-        </button>
-      </div>
-    </>
+    <div className="flex h-screen min-w-96 flex-col gap-20 bg-zinc-50 dark:bg-black dark:text-white">
+      <Header />
+    </div>
   );
 }
-
-export default App;
