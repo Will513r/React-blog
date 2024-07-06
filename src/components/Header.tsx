@@ -1,6 +1,6 @@
 export function Header() {
   return (
-    <header>
+    <header className="bg-black">
       <nav className="shadow">
         <div className="container mx-auto flex items-center justify-between px-10 py-6">
           <div>

@@ -1,8 +1,8 @@
 export function Mainpage() {
   return (
-    <main>
+    <main className="bg-black p-4">
       <br />
-      <section className="grid min-h-screen place-items-center p-8">
+      <section className="">
         <div className="container my-auto grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="item relative grid flex-col gap-2 rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none sm:grid-cols-2">
             <div className="relative m-0 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
