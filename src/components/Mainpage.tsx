@@ -13,7 +13,7 @@ export function Mainpage() {
               />
             </div>
             <div className="p-6 px-2 sm:pl-4 sm:pr-6">
-              <p className="mb-4 block font-sans text-sm !font-semibold font-light leading-normal text-inherit antialiased">
+              <p className="mb-4 block font-sans text-sm font-light leading-normal text-inherit antialiased">
                 Technology
               </p>
               <a
@@ -30,10 +30,10 @@ export function Mainpage() {
               <div className="flex items-center gap-4">
                 <img
                   src="https://bucket.material-tailwind.com/magic-ai/6b1c5941d417a2a32baee89c2f3d1975d7d4fb81e486ed43dc1082ac54b0658b.jpg"
-                  className="relative inline-block h-12 w-12 !rounded-full rounded-lg object-cover object-center"
+                  className="relative inline-block h-12 w-12 !rounded-full object-cover object-center"
                 />
                 <div>
-                  <p className="text-blue-gray-900 mb-0.5 block font-sans text-base !font-semibold font-light leading-relaxed antialiased">
+                  <p className="text-blue-gray-900 mb-0.5 block font-sans text-base font-light leading-relaxed antialiased">
                     John Doe
                   </p>
                   <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
@@ -52,7 +52,7 @@ export function Mainpage() {
               />
             </div>
             <div className="p-6 px-2 sm:pl-4 sm:pr-6">
-              <p className="mb-4 block font-sans text-sm !font-semibold font-light leading-normal text-inherit antialiased">
+              <p className="mb-4 block font-sans text-sm font-light leading-normal text-inherit antialiased">
                 Expansion
               </p>
               <a
@@ -69,10 +69,10 @@ export function Mainpage() {
               <div className="flex items-center gap-4">
                 <img
                   src="https://bucket.material-tailwind.com/magic-ai/16d71aaeda38d7aea4412875984357949ff12e7f2c502bb20c4c1bcf6c661607.jpg"
-                  className="relative inline-block h-12 w-12 !rounded-full rounded-lg object-cover object-center"
+                  className="relative inline-block h-12 w-12 !rounded-full object-cover object-center"
                 />
                 <div>
-                  <p className="text-blue-gray-900 mb-0.5 block font-sans text-base !font-semibold font-light leading-relaxed antialiased">
+                  <p className="text-blue-gray-900 mb-0.5 block font-sans text-base font-light leading-relaxed antialiased">
                     Jane Smith
                   </p>
                   <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
@@ -91,7 +91,7 @@ export function Mainpage() {
               />
             </div>
             <div className="p-6 px-2 sm:pl-4 sm:pr-6">
-              <p className="mb-4 block font-sans text-sm !font-semibold font-light leading-normal text-inherit antialiased">
+              <p className="mb-4 block font-sans text-sm font-light leading-normal text-inherit antialiased">
                 Sustainability
               </p>
               <a
@@ -108,10 +108,10 @@ export function Mainpage() {
               <div className="flex items-center gap-4">
                 <img
                   src="https://bucket.material-tailwind.com/magic-ai/2fadd7f00b6d08fc9dcacef52af357ec1213c0415ab97ace57ae0f17c7f6c2c8.jpg"
-                  className="relative inline-block h-12 w-12 !rounded-full rounded-lg object-cover object-center"
+                  className="relative inline-block h-12 w-12 !rounded-full object-cover object-center"
                 />
                 <div>
-                  <p className="text-blue-gray-900 mb-0.5 block font-sans text-base !font-semibold font-light leading-relaxed antialiased">
+                  <p className="text-blue-gray-900 mb-0.5 block font-sans text-base font-light leading-relaxed antialiased">
                     Alex Johnson
                   </p>
                   <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
