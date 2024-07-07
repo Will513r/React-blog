@@ -1,3 +1,5 @@
+import Reactlogo from "../assets/react.svg";
+
 export function Header() {
   return (
     <header className="bg-black">
@@ -8,7 +10,7 @@ export function Header() {
               React Blog
             </h1>
           </div>
-
+          <img src={Reactlogo} />
           <div>
             <div className="hover:cursor-pointer sm:hidden">
               <span className="mb-1 block h-1 w-8 rounded-full bg-gradient-to-tr from-indigo-600 to-green-600"></span>

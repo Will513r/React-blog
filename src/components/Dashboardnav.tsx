@@ -1,7 +1,7 @@
 export function Dashboardnav() {
   return (
-    <div className="grid grid-cols-2">
-      <aside className="flex min-h-screen py-6">
+    <div className="flex">
+      <aside className="flex min-h-screen w-1/4 py-6">
         <div className="flex w-full max-w-xs bg-gray-800 p-4">
           <ul className="flex w-full flex-col">
             <li className="my-px">
