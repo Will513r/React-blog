@@ -1,6 +1,6 @@
 export function Mainpage() {
   return (
-    <main className="flex justify-end bg-white">
+    <main className="m-0 flex h-screen justify-end bg-white p-0">
       <section className="w-3/4 self-end p-4">
         <div className="container my-auto grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="item relative grid flex-col gap-2 rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none sm:grid-cols-2">
