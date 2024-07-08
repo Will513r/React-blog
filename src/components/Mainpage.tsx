@@ -1,3 +1,7 @@
+import Willray from "../assets/Will.png";
+import Mikelat from "../assets/Mike.png";
+import Chrisf from "../assets/Chris.png";
+
 export function Mainpage() {
   return (
     <main className="m-0 flex h-screen justify-end bg-white p-0">
@@ -28,12 +32,13 @@ export function Mainpage() {
               </p>
               <div className="flex items-center gap-4">
                 <img
-                  src="https://bucket.material-tailwind.com/magic-ai/6b1c5941d417a2a32baee89c2f3d1975d7d4fb81e486ed43dc1082ac54b0658b.jpg"
+                  src={Willray}
+                  // "https://bucket.material-tailwind.com/magic-ai/06b38f84f9669f766048c469ce861b81880378273a11ae9badaedfc32868ef44.jpg"
                   className="relative inline-block h-12 w-12 !rounded-full object-cover object-center"
                 />
                 <div>
                   <p className="text-blue-gray-900 mb-0.5 block font-sans text-base font-light leading-relaxed antialiased">
-                    John Doe
+                    William Ray
                   </p>
                   <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
                     2022-08-15
@@ -67,12 +72,13 @@ export function Mainpage() {
               </p>
               <div className="flex items-center gap-4">
                 <img
-                  src="https://bucket.material-tailwind.com/magic-ai/16d71aaeda38d7aea4412875984357949ff12e7f2c502bb20c4c1bcf6c661607.jpg"
+                  src={Mikelat}
+                  // "https://bucket.material-tailwind.com/magic-ai/16d71aaeda38d7aea4412875984357949ff12e7f2c502bb20c4c1bcf6c661607.jpg"
                   className="relative inline-block h-12 w-12 !rounded-full object-cover object-center"
                 />
                 <div>
                   <p className="text-blue-gray-900 mb-0.5 block font-sans text-base font-light leading-relaxed antialiased">
-                    Jane Smith
+                    Michael latimore
                   </p>
                   <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
                     2022-09-02
@@ -106,12 +112,13 @@ export function Mainpage() {
               </p>
               <div className="flex items-center gap-4">
                 <img
-                  src="https://bucket.material-tailwind.com/magic-ai/2fadd7f00b6d08fc9dcacef52af357ec1213c0415ab97ace57ae0f17c7f6c2c8.jpg"
+                  src={Chrisf}
+                  // "https://bucket.material-tailwind.com/magic-ai/2fadd7f00b6d08fc9dcacef52af357ec1213c0415ab97ace57ae0f17c7f6c2c8.jpg"
                   className="relative inline-block h-12 w-12 !rounded-full object-cover object-center"
                 />
                 <div>
                   <p className="text-blue-gray-900 mb-0.5 block font-sans text-base font-light leading-relaxed antialiased">
-                    Alex Johnson
+                    Christopher Forti
                   </p>
                   <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
                     2022-09-20
