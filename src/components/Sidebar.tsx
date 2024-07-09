@@ -1,13 +1,13 @@
 export function Sidebar() {
   return (
-    <aside className="col-span-1 h-96 w-64 bg-gray-800 p-4 text-white">
-      <div className="flex items-center justify-around rounded-lg bg-white px-4 py-3">
+    <aside className="w-64 bg-black p-4 text-white">
+      <div className="mx-auto flex items-center justify-around rounded-lg bg-white px-1">
         <input
           type="text"
           placeholder="seach"
-          className="mr-2 w-full rounded-md bg-gray-100 p-2 pl-2 outline-none ring-indigo-700"
+          className="w-full rounded-md bg-gray-100 p-2 outline-none ring-indigo-700"
         />
-        <span>
+        <span className="bg-gray-100 text-black">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"

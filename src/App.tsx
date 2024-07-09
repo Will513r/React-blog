@@ -5,11 +5,12 @@ import { Sidebar } from "./components/Sidebar";
 
 export default function App() {
   return (
-    <div className="flex h-screen min-w-96 flex-col gap-20 bg-zinc-50 dark:bg-black dark:text-white">
+    <div className="flex h-screen min-w-96 flex-col bg-zinc-50 dark:bg-black dark:text-white">
       <Header />
-      <Sidebar />
-
-      <Mainpage />
+      <div className="flex">
+        <Sidebar />
+        <Mainpage />
+      </div>
       <Footer />
     </div>
   );
