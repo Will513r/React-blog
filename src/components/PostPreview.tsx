@@ -32,12 +32,11 @@ export function PostPreview({
         <div className="flex items-center gap-4">
           <img
             src={authorImage}
-            // "https://bucket.material-tailwind.com/magic-ai/06b38f84f9669f766048c469ce861b81880378273a11ae9badaedfc32868ef44.jpg"
             className="relative inline-block h-12 w-12 !rounded-full object-cover object-center"
           />
           <div>
             <p className="text-blue-gray-900 mb-0.5 block font-sans text-base font-light leading-relaxed antialiased">
-              William Ray
+              {/* William Ray */}
             </p>
             <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
               2022-08-15

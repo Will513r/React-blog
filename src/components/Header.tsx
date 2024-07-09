@@ -3,7 +3,7 @@ export function Header() {
     <header className="bg-black">
       <div className="container mx-auto flex items-center justify-between px-10 py-6">
         <div>
-          <h1 className="bg-gradient-to-tr from-indigo-600 to-green-600 bg-clip-text text-5xl font-bold text-transparent hover:cursor-pointer">
+          <h1 className="bg-gradient-to-tr from-indigo-600 to-green-600 bg-clip-text text-4xl font-bold text-transparent hover:cursor-pointer">
             React Blog
           </h1>
         </div>
