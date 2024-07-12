@@ -13,7 +13,7 @@ export default function App() {
       <Main />
       
       </div>
-      <hr className="border-b-2 border-gray-400 mb-8 mx-4"></hr>
+      
       <Footer />    
      
     </div>

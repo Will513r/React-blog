@@ -1,6 +1,6 @@
 //import React from 'react'
 
-export default function Main() {
+const Main = ()=> {
   return (
     <main className="flex-1 p-4">
        <div className='container mx-auto my-10'>
@@ -36,5 +36,6 @@ export default function Main() {
     </main>
   );
 }
+export default Main
 
 

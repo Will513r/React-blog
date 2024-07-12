@@ -1,4 +1,4 @@
-export default function Header() {
+const Header = () =>{
   return (
     <header className="flex items-baseline gap-4 p-4 bg-red-500">
       <h1 className="text-3xl font-semibold">React Blog</h1>
@@ -10,3 +10,4 @@ export default function Header() {
     </header>
   );
 }
+export default Header
