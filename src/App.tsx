@@ -1,22 +1,17 @@
-import { useState } from "react";
-import "./App.css";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Mainpage } from "./components/Mainpage";
+import { Sidebar } from "./components/Sidebar";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-    <>
-      <div>
-        <img src="/underdog.jpg"></img>
+    <div className="flex h-screen min-w-96 flex-col bg-zinc-50 dark:bg-black dark:text-white">
+      <Header />
+      <div className="flex">
+        <Sidebar />
+        <Mainpage />
       </div>
-      <h1 className="text-7xl">Frontend Blog</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          If your bored click this the count is {count}
-        </button>
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 }
-
-export default App;
