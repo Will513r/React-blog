@@ -1,6 +1,6 @@
-export function Header() {
+export default function Header() {
   return (
-    <header className="flex items-baseline gap-4 p-4">
+    <header className="flex items-baseline gap-4 p-4 bg-red-500">
       <h1 className="text-3xl font-semibold">React Blog</h1>
       <nav className="flex gap-2">
         <a href="#">Home</a>
