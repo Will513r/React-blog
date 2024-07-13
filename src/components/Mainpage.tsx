@@ -12,7 +12,7 @@ const postThreeImage =
 
 export function Mainpage() {
   return (
-    <main className="container m-0 flex flex-col overflow-scroll bg-white p-4">
+    <main className="container m-0 flex h-[calc(100vh_-_12.5rem)] flex-col overflow-scroll bg-white p-4">
       <PostPreview postImage={postOneImage} authorImage={Willray} />
       <PostPreview postImage={postTwoImage} authorImage={Mikelat} />
       <PostPreview postImage={postThreeImage} authorImage={Chrisf} />
