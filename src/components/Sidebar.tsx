@@ -1,6 +1,6 @@
 export function Sidebar() {
   return (
-    <aside className="w-64 bg-black p-4 text-white">
+    <aside className="hidden w-64 bg-black p-4 text-white md:block">
       <div className="mx-auto flex items-center justify-around rounded-lg bg-white px-1">
         <input
           type="text"
