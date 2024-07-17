@@ -14,7 +14,12 @@ export function Sidebar() {
       >
         Open Sidebar
       </button>
-      <aside className="${ isOpen? 'block' : 'hidden' }`} hidden w-64 bg-black p-4 text-white md:block">
+      <aside
+        className={
+          (isOpen ? "block" : "hidden") +
+          " w-64 bg-black p-4 text-white md:block"
+        }
+      >
         <div className="mx-auto flex items-center justify-around rounded-lg bg-white px-1">
           <input
             type="text"
