@@ -12,7 +12,7 @@ export function Sidebar() {
         className="bg-black p-2 text-white md:hidden"
         onClick={toggleSidebar}
       >
-        Open Sidebar
+        Sidebar
       </button>
       <aside
         className={
