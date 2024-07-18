@@ -11,6 +11,7 @@ export function Sidebar() {
       <button
         className="bg-black p-2 text-white md:hidden"
         onClick={toggleSidebar}
+        style={{ position: "absolute", top: "1.5rem", right: "2rem" }}
       >
         Sidebar
       </button>
