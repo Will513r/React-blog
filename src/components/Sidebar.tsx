@@ -15,7 +15,7 @@ export function Sidebar() {
           position: "absolute",
           top: "1.5rem",
           right: "2rem",
-          color: "text-white",
+          color: "text-white", //got hung up here color not working
         }}
       >
         Sidebar
