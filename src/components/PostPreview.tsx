@@ -1,10 +1,14 @@
-export function PostPreview({
-  postImage,
-  authorImage,
-}: {
+type Post = {
   postImage: string;
   authorImage: string;
-}) {
+};
+
+type PostPreviewProps = {
+  post: Post;
+};
+
+export function PostPreview(props: PostPreviewProps) {
+  const { postImage, authorImage} = props.post;
   return (
     <div className="flex flex-col text-gray-700">
       <div className="relative m-0 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">

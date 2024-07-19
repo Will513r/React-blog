@@ -10,12 +10,26 @@ const postTwoImage =
 const postThreeImage =
   "https://bucket.material-tailwind.com/magic-ai/dc74a867f21afc734166a6d37c08beaba4ff040664ba8ccce918e054264ad68d.jpg";
 
+const data = [
+  {
+    postImage: postOneImage,
+    authorImage: Willray,
+  },
+  {
+    postImage: postTwoImage,
+    authorImage: Mikelat,
+  },
+  {
+    postImage: postThreeImage,
+    authorImage: Chrisf,
+  },
+];
 export function Mainpage() {
   return (
     <main className="container m-0 flex h-[calc(100vh_-_12.5rem)] flex-col overflow-scroll bg-white p-4">
-      <PostPreview postImage={postOneImage} authorImage={Willray} />
-      <PostPreview postImage={postTwoImage} authorImage={Mikelat} />
-      <PostPreview postImage={postThreeImage} authorImage={Chrisf} />
+      {data.map((post) => {
+        return <PostPreview post={post} />;
+      })}
     </main>
   );
 }
