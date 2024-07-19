@@ -9,21 +9,15 @@ export function Sidebar() {
   return (
     <>
       <button
-        className="bg-black p-2 md:hidden"
+        className="rounded-m absolute right-8 top-6 bg-gradient-to-tr from-indigo-600 to-green-600 bg-clip-text p-2 font-bold text-transparent md:hidden"
         onClick={toggleSidebar}
-        style={{
-          position: "absolute",
-          top: "1.5rem",
-          right: "2rem",
-          color: "text-white", //got hung up here color not responding
-        }}
       >
         Sidebar
       </button>
       <aside
         className={
           (isOpen ? "block" : "hidden") +
-          " w-64 bg-black p-4 text-white md:block"
+          " absolute left-0 top-20 z-50 w-64 bg-black p-4 text-white md:static md:block"
         }
       >
         <div className="mx-auto flex items-center justify-around rounded-lg bg-white px-1">
