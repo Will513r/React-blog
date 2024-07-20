@@ -42,12 +42,8 @@ export function Post({ post }: PostProps) {
               </p>
 
               {/* Title of the blog post */}
-              <a
-                href="#"
-                className="block mt-4 text-2xl font-semibold text-gray-800 hover:underline dark:text-white"
-              >
-                {post.title}
-              </a>
+              <p>{post.title}</p>
+ 
 
               {/* Content of the blog post */}
               {isContentVisible && (
