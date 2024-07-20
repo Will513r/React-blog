@@ -42,7 +42,7 @@ export function Post({ post }: PostProps) {
               </p>
 
               {/* Title of the blog post */}
-              <p>{post.title}</p>
+              <p className="text-xl font-semibold text-gray-800 dark:text-white">{post.title}</p>
  
 
               {/* Content of the blog post */}
