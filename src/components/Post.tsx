@@ -10,16 +10,6 @@ import { useState } from "react";
  * @returns The JSX element representing the blog post.
  */
 export function Post({ post }: PostProps) {
-  // State to keep track of whether the full content is visible or not.
-  const [isContentVisible, setContentVisible] = useState(false);
-
-  /**
-   * Toggles the visibility of the full content.
-   */
-  const toggleContentVisibility = () => {
-    setContentVisible(!isContentVisible);
-  };
-
   return (
     <div className="text-black">
       {/* Container for the blog post */}
@@ -44,21 +34,10 @@ export function Post({ post }: PostProps) {
               {/* Title of the blog post */}
               <p className="text-xl font-semibold text-gray-800 dark:text-white">{post.title}</p>
  
-
               {/* Content of the blog post */}
-              {isContentVisible && (
-                <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
-                  {post.content}
-                </p>
-              )}
-
-              {/* Button to show the full content */}
-              <button
-                onClick={toggleContentVisibility}
-                className="inline-block mt-2 text-blue-500 underline hover:text-blue-400"
-              >
-                Read more
-              </button>
+              <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+                {post.content}
+              </p>
 
               {/* Author information */}
               <div className="flex items-center mt-6">
