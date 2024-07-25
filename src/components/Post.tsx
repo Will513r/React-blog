@@ -5,6 +5,7 @@ type PostProps = { post: PostData };
 export function Post({ post }: PostProps) {
   return (
     <main className="text-black">
+      <p>{post.author}</p>
       <h1 className="text p-4 text-5xl">What is Lorem Ipsum?</h1>
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
@@ -85,6 +86,7 @@ export function Post({ post }: PostProps) {
         vestibulum dolor. Aenean semper tempus neque a varius. Suspendisse ac
         odio eu nunc ornare fringilla. Donec cursus vel lorem ut feugiat.
       </em>
+      <p>{post.author}</p>
     </main>
   );
 }
