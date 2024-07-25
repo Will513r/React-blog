@@ -2,7 +2,6 @@ import type { PostData } from "../content/content";
 
 type PostProps = { post: PostData };
 
-import { useState } from "react";
 
 /**
  * Renders a single blog post with its content and author information.
