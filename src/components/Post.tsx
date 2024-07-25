@@ -5,7 +5,9 @@ type PostProps = { post: PostData };
 export function Post({ post }: PostProps) {
   return (
     <main className="text-black">
-      <p>{post.author}</p>
+      {post.author} <br />
+      {post.title} <br />
+      {post.content} <br />
       <h1 className="text p-4 text-5xl">What is Lorem Ipsum?</h1>
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
