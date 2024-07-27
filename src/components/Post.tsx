@@ -6,7 +6,8 @@ export function Post({ post }: PostProps) {
   return (
     <main className="text-black">
       <h2 className="p-2 text-xl">{post.author}</h2>
-      <h2 className="p-3">{post.title}</h2>
+      <h2 className="p-2">{new Date().toLocaleDateString()}</h2>
+      <h2 className="p-2">{post.title}</h2>
       <em className="p-3 text-indigo-700">{post.content}</em>
       <h1 className="text p-4 text-5xl">What is Lorem Ipsum?</h1>
       <p>
@@ -88,7 +89,6 @@ export function Post({ post }: PostProps) {
         vestibulum dolor. Aenean semper tempus neque a varius. Suspendisse ac
         odio eu nunc ornare fringilla. Donec cursus vel lorem ut feugiat.
       </em>
-      <p>{post.author}</p>
     </main>
   );
 }
