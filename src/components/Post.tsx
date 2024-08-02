@@ -2,11 +2,6 @@ import type { PostData } from "../content/content";
 
 type PostProps = { post: PostData };
 
-/**
- * Renders a single blog post with its content and author information.
- * @param post - The data of the blog post to be displayed.
- * @returns The JSX element representing the blog post.
- */
 export function Post({ post }: PostProps) {
   return (
     <div className="text-black">
