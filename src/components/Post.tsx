@@ -2,7 +2,6 @@ import type { PostData } from "../content/content";
 
 type PostProps = { post: PostData };
 
-
 /**
  * Renders a single blog post with its content and author information.
  * @param post - The data of the blog post to be displayed.
@@ -13,41 +12,47 @@ export function Post({ post }: PostProps) {
     <div className="text-black">
       {/* Container for the blog post */}
       <section className="bg-white dark:bg-gray-900">
-        <div className="container px-6 py-10 mx-auto">
-          <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">From the blog</h1>
+        <div className="container mx-auto px-6 py-10">
+          <h1 className="text-2xl font-semibold capitalize text-gray-800 lg:text-3xl dark:text-white">
+            From the blog
+          </h1>
 
-          <div className="mt-8 lg:-mx-6 lg:flex lg:items-center">
+          <div className="mt-8 flex flex-col items-center lg:-mx-6">
             {/* Image of the blog post */}
             <img
-              className="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96"
+              className="h-72 w-full rounded-xl object-cover lg:mx-6 lg:h-96"
               src={post.postImage}
               alt=""
             />
 
-            <div className="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6">
+            <div className="mt-6 lg:mx-6 lg:mt-0">
               {/* Date of the blog post */}
               <p className="text-sm text-gray-500 dark:text-gray-300">
                 {post.publishedDate.toLocaleDateString()}
               </p>
 
               {/* Title of the blog post */}
-              <p className="text-xl font-semibold text-gray-800 dark:text-white">{post.title}</p>
- 
+              <p className="text-xl font-semibold text-gray-800 dark:text-white">
+                {post.title}
+              </p>
+
               {/* Content of the blog post */}
-              <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+              <p className="mt-3 text-sm text-gray-500 md:text-sm dark:text-gray-300">
                 {post.content}
               </p>
 
               {/* Author information */}
-              <div className="flex items-center mt-6">
+              <div className="mt-6 flex items-center">
                 <img
-                  className="object-cover object-center w-10 h-10 rounded-full"
+                  className="h-10 w-10 rounded-full object-cover object-center"
                   src={post.authorImage}
                   alt=""
                 />
 
                 <div className="mx-4">
-                  <h1 className="text-sm text-gray-700 dark:text-gray-200">{post.author}</h1>                  
+                  <h1 className="text-sm text-gray-700 dark:text-gray-200">
+                    {post.author}
+                  </h1>
                 </div>
               </div>
             </div>
