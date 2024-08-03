@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 type HeaderProps = {
-  navigation: React.Dispatch<React.SetStateAction<boolean>>;
+  headerNavigation: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export function Header({}: HeaderProps) {
+export function Header({ headerNavigation }: HeaderProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   function navigationToggle() {
