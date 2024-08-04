@@ -7,21 +7,26 @@ type HeaderProps = {
 export function Header({ setHeaderNavigation }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleHeader = () => {
+    setIsOpen(!isOpen);
+    setHeaderNavigation((prev) => prev + 1);
+  };
+
   return (
     <header className="bg-black">
       <div className="container mx-auto flex items-center justify-between px-10 py-6">
         <div>
-          <a
-            onClick={setHeaderNavigation}
+          <span
+            onClick={toggleHeader}
             className="bg-gradient-to-tr from-indigo-600 to-green-600 bg-clip-text text-4xl font-bold text-transparent hover:cursor-pointer"
           >
-            React Blog
-          </a>
+            <a href="/Mainpage">React Blog</a>
+          </span>
         </div>
         <nav className="flex items-center">
           <ul className="hidden items-center space-x-4 sm:flex">
             <li
-              onClick={setHeaderNavigation}
+              onClick={toggleHeader}
               className="text-md from-indigo-600 to-green-600 hover:text-indigo-600"
             >
               <a href="/Mainpage">Home</a>
