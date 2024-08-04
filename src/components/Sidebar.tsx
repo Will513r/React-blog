@@ -1,11 +1,21 @@
 import { useState } from "react";
+import { data } from "../content/content";
+import { v4 as uuidv4 } from "uuid";
 
-export function Sidebar() {
+type SidebarProps = {
+  setSelectedPost: React.Dispatch<React.SetStateAction<number>>;
+};
+
+export function Sidebar({ setSelectedPost }: SidebarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleSidebar = () => {
+  function toggleSidebar() {
     setIsOpen(!isOpen);
-  };
+  }
+
+  function selectPost(selection: number) {
+    setSelectedPost(selection);
+  }
   return (
     <>
       <button
@@ -48,46 +58,20 @@ export function Sidebar() {
             Posts
           </h1>
           <div className="list-none rounded-md bg-white text-center">
-            <li className="border-b-2 py-3">
-              <a
-                href="#"
-                className="text-1xl bg-gradient-to-tr from-indigo-600 to-green-600 bg-clip-text font-bold text-transparent hover:cursor-pointer"
-              >
-                Post 1
-              </a>
-            </li>
-            <li className="border-b-2 py-3">
-              <a
-                href="#"
-                className="text-1xl bg-gradient-to-tr from-indigo-600 to-green-600 bg-clip-text font-bold text-transparent hover:cursor-pointer"
-              >
-                Post 2
-              </a>
-            </li>
-            <li className="border-b-2 py-3">
-              <a
-                href="#"
-                className="text-1xl bg-gradient-to-tr from-indigo-600 to-green-600 bg-clip-text font-bold text-transparent hover:cursor-pointer"
-              >
-                Post 3
-              </a>
-            </li>
-            <li className="border-b-2 py-3">
-              <a
-                href="#"
-                className="text-1xl bg-gradient-to-tr from-indigo-600 to-green-600 bg-clip-text font-bold text-transparent hover:cursor-pointer"
-              >
-                Post 4
-              </a>
-            </li>
-            <li className="py-3">
-              <a
-                href="#"
-                className="text-1xl bg-gradient-to-tr from-indigo-600 to-green-600 bg-clip-text font-bold text-transparent hover:cursor-pointer"
-              >
-                Post 5
-              </a>
-            </li>
+            {data.map((_, index) => {
+              const postNumber = index + 1;
+              return (
+                <li
+                  key={uuidv4()}
+                  className="text-1xl border-b-2 bg-gradient-to-tr from-indigo-600 to-green-600 bg-clip-text py-3 font-bold text-transparent hover:cursor-pointer"
+                  onClick={() => {
+                    selectPost(postNumber);
+                  }}
+                >
+                  Post {postNumber}
+                </li>
+              );
+            })}
           </div>
         </div>
       </aside>
