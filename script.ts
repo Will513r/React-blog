@@ -9,6 +9,8 @@ type Metadata = {
   description: string;
   date: Date;
   slug: string;
+  author: string;             // New field: Author's name
+  authorImageUrl?: string;     // New field: Author's image URL
   tags?: string[];
   imageUrl?: string;
 };
@@ -20,8 +22,6 @@ type Post = {
 
 
 function buildPostsFromMarkDown() {
-
-
  try {
   const files = readdirSync("./content").filter((file) => file.endsWith(".md"));
   const output: Post[] = [];
@@ -75,7 +75,7 @@ function validateMetadata(metadata: unknown, fileName: string) {
     return false;
   }
 
-  const { published, title, description, date, slug, tags, imageUrl } =
+  const { published, title, description, date, slug, tags, imageUrl, author, authorImageUrl } =
     metadata as Metadata;
   try {
     if (typeof published !== "boolean") {
@@ -104,11 +104,25 @@ function validateMetadata(metadata: unknown, fileName: string) {
       );
     }
   } catch (error) {
-    if ("message" in (error as Error)) {
+    if (error instanceof Error) {
       console.error(
-        "There was an error inside of " + fileName + ":\n",
-        // @ts-expect-error
+        "There was an error inside of " + fileName + ":\n",              
         error.message
+      );
+    }
+    if (typeof author !== "string") {
+      throw new Error(
+        "\x1b[31mThe markdown must contain a valid author string.	\x1b[0m"
+      );
+    }
+    if (
+      authorImageUrl &&
+      !authorImageUrl.startsWith("http://") &&
+      !authorImageUrl.startsWith("https://") &&
+      !authorImageUrl.startsWith("/")
+    ) {
+      throw new Error(
+        "\x1b[31mAuthor image URL must be an absolute URL or a path starting with /\nExample: /images/authors/johndoe.jpg\x1b[0m"
       );
     }
     return false;

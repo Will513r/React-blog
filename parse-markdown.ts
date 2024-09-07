@@ -10,6 +10,8 @@ type Metadata = {
   description: string;
   date: Date;
   slug: string;
+  author?: string;             // New field - optional
+  authorImageUrl?: string;      // New field - optional
   tags?: string[];
   imageUrl?: string;
 };
@@ -87,7 +89,7 @@ function validateMetadata(metadata: unknown, fileName: string) {
     return false;
   }
 
-  const { published, title, description, date, slug, tags, imageUrl } =
+  const { published, title, description, date, slug, tags, imageUrl, author, authorImageUrl  } =
     metadata as Metadata;
   try {
     if (typeof published !== "boolean") {
@@ -115,6 +117,21 @@ function validateMetadata(metadata: unknown, fileName: string) {
         "\x1b[31mThe markdown must contain a valid slug string.	\x1b[0m",
       );
     }
+    if (typeof author !== "string") {// New validation check
+      throw new Error(
+        "\x1b[31mThe markdown must contain a valid author string.	\x1b[0m"
+      );
+    }
+    if (
+      authorImageUrl &&
+      !authorImageUrl.startsWith("http://") &&
+      !authorImageUrl.startsWith("https://") &&
+      !authorImageUrl.startsWith("/")
+    ) {// New validation check
+      throw new Error(
+        "\x1b[31mAuthor image URL must be an absolute URL or a path starting with /\nExample: /images/authors/johndoe.jpg\x1b[0m"
+      );
+    }
     if (
       imageUrl &&
       !imageUrl.startsWith("http://") &&
@@ -124,15 +141,14 @@ function validateMetadata(metadata: unknown, fileName: string) {
       throw new Error(
         "\x1b[31mimageUrl must be an absolute URL or a path starting with /\nExample: /images/my-image.jpg for image in public folder\nOr: https://example.com/image.jpg for an external image\x1b[0m",
       );
-    }
+    }    
   } catch (error) {
     if ("message" in (error as Error)) {
       console.error(
         "\x1b[34mThere was an error inside of " + fileName + ":\n\x1b[0m",
-        // @ts-expect-error
-        error.message,
+        (error as Error).message  //error.message,
       );
-    }
+    }    
     return false;
   }
   return true;
