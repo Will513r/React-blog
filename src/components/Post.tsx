@@ -1,8 +1,19 @@
-import type { PostData } from "../content/content";
+import type { PostData } from "../posts/posts";
+import underdogLogo from "../assets/underdog.jpg";
 
 type PostProps = { post: PostData };
 
 export function Post({ post }: PostProps) {
+  const {
+    title,
+    description,
+    published,
+    date: dateString,
+    slug,
+    tags,
+    imageUrl,
+  } = post.metadata;
+  const date = new Date(dateString);
   return (
     <div className="text-black">
       {/* Container for the blog post */}
@@ -16,37 +27,38 @@ export function Post({ post }: PostProps) {
             {/* Image of the blog post */}
             <img
               className="h-72 w-full rounded-xl object-cover lg:mx-6 lg:h-96"
-              src={post.postImage}
+              src={imageUrl ? imageUrl : underdogLogo}
               alt=""
             />
 
             <div className="mt-6 lg:mx-6 lg:mt-0">
               {/* Date of the blog post */}
               <p className="text-sm text-gray-500 dark:text-gray-300">
-                {post.publishedDate.toLocaleDateString()}
+                {date.toLocaleDateString()}
               </p>
 
               {/* Title of the blog post */}
               <p className="text-xl font-semibold text-gray-800 dark:text-white">
-                {post.title}
+                {title}
               </p>
 
               {/* Content of the blog post */}
-              <p className="mt-3 text-sm text-gray-500 md:text-sm dark:text-gray-300">
-                {post.content}
-              </p>
+              <div
+                className="mt-3 text-sm text-gray-500 md:text-sm dark:text-gray-300"
+                dangerouslySetInnerHTML={{ __html: post.html }}
+              ></div>
 
               {/* Author information */}
               <div className="mt-6 flex items-center">
-                <img
+                {/* <img
                   className="h-10 w-10 rounded-full object-cover object-center"
                   src={post.authorImage}
                   alt=""
-                />
+                /> */}
 
                 <div className="mx-4">
                   <h1 className="text-sm text-gray-700 dark:text-gray-200">
-                    {post.author}
+                    To do add author
                   </h1>
                 </div>
               </div>
