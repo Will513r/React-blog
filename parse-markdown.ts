@@ -146,8 +146,7 @@ function validateMetadata(metadata: unknown, fileName: string) {
     if ("message" in (error as Error)) {
       console.error(
         "\x1b[34mThere was an error inside of " + fileName + ":\n\x1b[0m",
-        (error as Error).message  //error.message,
-      );
+        (error as Error).message );
     }    
     return false;
   }
