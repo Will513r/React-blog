@@ -8,6 +8,7 @@ tags:
   - typescript
   - programming
 imageUrl: "/Chris.png"
+author: "Chris"
 ---
 
 # Content
