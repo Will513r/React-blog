@@ -12,6 +12,8 @@ export function Post({ post }: PostProps) {
     slug,
     tags,
     imageUrl,
+    author,
+    authorImageUrl,
   } = post.metadata;
   const date = new Date(dateString);
   return (
