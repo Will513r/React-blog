@@ -13,7 +13,7 @@ export function Post({ post }: PostProps) {
     tags,
     imageUrl,
     author,
-    authorImageUrl,
+    authorImage,
   } = post.metadata;
   const date = new Date(dateString);
   return (
@@ -24,7 +24,9 @@ export function Post({ post }: PostProps) {
           <h1 className="text-2xl font-semibold capitalize text-gray-800 lg:text-3xl dark:text-white">
             From the blog
           </h1>
-
+          <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
+            {slug}
+          </p>
           <div className="mt-8 flex flex-col items-center lg:-mx-6">
             {/* Image of the blog post */}
             <img
@@ -38,12 +40,16 @@ export function Post({ post }: PostProps) {
               <p className="text-sm text-gray-500 dark:text-gray-300">
                 {date.toLocaleDateString()}
               </p>
-
               {/* Title of the blog post */}
               <p className="text-xl font-semibold text-gray-800 dark:text-white">
                 {title}
               </p>
-
+              <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
+                {tags}
+              </p>
+              <p className="mb-8 block font-sans text-base font-normal leading-relaxed !text-gray-500 text-inherit antialiased">
+                {description}
+              </p>
               {/* Content of the blog post */}
               <div
                 className="mt-3 text-sm text-gray-500 md:text-sm dark:text-gray-300"
@@ -52,16 +58,18 @@ export function Post({ post }: PostProps) {
 
               {/* Author information */}
               <div className="mt-6 flex items-center">
-                {/* <img
+                <img
                   className="h-10 w-10 rounded-full object-cover object-center"
-                  src={post.authorImage}
-                  alt=""
-                /> */}
+                  src={authorImage ? authorImage : underdogLogo}
+                />
 
                 <div className="mx-4">
                   <h1 className="text-sm text-gray-700 dark:text-gray-200">
-                    To do add author
+                    {author}
                   </h1>
+                  <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
+                    {published}
+                  </p>
                 </div>
               </div>
             </div>
