@@ -10,8 +10,8 @@ type Metadata = {
   description: string;
   date: Date;
   slug: string;
-  author?: string;
-  authorImage?: string;
+  author: string;
+  authorImage: string;
   tags?: string[];
   imageUrl?: string;
 };
