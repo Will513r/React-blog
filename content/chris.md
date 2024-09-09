@@ -9,7 +9,6 @@ tags:
   - programming
 imageUrl:
 author: "The Man"
-authorImage:
 ---
 
 # Content
