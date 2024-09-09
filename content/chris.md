@@ -7,8 +7,7 @@ slug: understanding-typescript
 tags:
   - typescript
   - programming
-imageUrl:
-author: "The Man"
+author: Christopher Forti
 ---
 
 # Content
