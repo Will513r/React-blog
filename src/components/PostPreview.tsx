@@ -47,7 +47,7 @@ export function PostPreview(props: PostPreviewProps) {
           /> }
           <div>
             <p className="text-blue-gray-900 mb-0.5 block font-sans text-base font-light leading-relaxed antialiased">
-              {author}
+              {author ? author : "Unknown Author"}
             </p>
             <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
               {date.toDateString()}

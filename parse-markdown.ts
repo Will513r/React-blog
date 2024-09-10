@@ -79,8 +79,7 @@ function parseMarkdownFile(filePath: string) {
     id: uuidv4(),
     metadata,
     html,
-  };
-  console.log(output);
+  };  
   return output as Post;
 }
 
