@@ -33,7 +33,7 @@ export function Sidebar({ setSelectedPost }: SidebarProps) {
         <div className="mx-auto flex items-center justify-around rounded-lg bg-white px-1">
           <input
             type="text"
-            placeholder="seach"
+            placeholder="search"
             className="w-full rounded-md bg-gray-100 p-2 outline-none ring-indigo-700"
           />
           <span className="bg-gray-100 text-black">
