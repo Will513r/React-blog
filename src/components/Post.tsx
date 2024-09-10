@@ -6,12 +6,13 @@ type PostProps = { post: PostData };
 export function Post({ post }: PostProps) {
   const {
     title,
-    description,
     published,
+    description,    
     date: dateString,
     slug,
     tags,
     imageUrl,
+    author
   } = post.metadata;
   const date = new Date(dateString);
   return (
@@ -58,7 +59,7 @@ export function Post({ post }: PostProps) {
 
                 <div className="mx-4">
                   <h1 className="text-sm text-gray-700 dark:text-gray-200">
-                    To do add author
+                    {author}
                   </h1>
                 </div>
               </div>

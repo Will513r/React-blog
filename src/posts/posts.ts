@@ -14,6 +14,8 @@ type Metadata = {
   slug: string;
   tags?: string[];
   imageUrl?: string;
+  author: string;
+  authorImageUrl?: string;
 };
 
 export const data: PostData[] = postsJson;
