@@ -5,14 +5,14 @@ import { v4 as uuidv4 } from "uuid";
 import { Plugin } from "vite";
 
 type Metadata = {
+  published: boolean;
   title: string;
-  published: boolean; 
   description: string;
   date: Date;
   slug: string;
   tags?: string[];
   imageUrl?: string;
-  author: string;             // New field
+  author?: string;             // New field - optional
   authorImageUrl?: string;   // New field - optional
  };
 type Post = {
@@ -117,21 +117,6 @@ function validateMetadata(metadata: unknown, fileName: string) {
         "\x1b[31mThe markdown must contain a valid slug string.	\x1b[0m",
       );
     }
-    if (typeof author !== "string") {// New validation check
-      throw new Error(
-        "\x1b[31mThe markdown must contain a valid author string.	\x1b[0m"
-      );
-    }
-    // if (
-    //   authorImageUrl &&
-    //   !authorImageUrl.startsWith("http://") &&
-    //   !authorImageUrl.startsWith("https://") &&
-    //   !authorImageUrl.startsWith("/")
-    // ) {// New validation check
-    //   throw new Error(
-    //     "\x1b[31mAuthor image URL must be an absolute URL or a path starting with /\nExample: /images/authors/johndoe.jpg\x1b[0m"
-    //   );
-    // }
     if (
       imageUrl &&
       !imageUrl.startsWith("http://") &&

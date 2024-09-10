@@ -9,9 +9,9 @@ tags:
   - technology
   - coding
   - software development
-imageUrl: "/MichaelLatimore.jpg"
+imageUrl: "/mike_md_image.jpg"
 author: "Michael A. Latimore"
-authorImageUrl: "https://unsplash.com/photos/closeup-photo-of-eyeglasses-w7ZyuGYNpRQ"
+authorImageUrl: "/Mike_author_image.png"
 ---
 
 # The Art of Code

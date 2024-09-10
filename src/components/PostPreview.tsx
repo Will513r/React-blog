@@ -14,6 +14,7 @@ export function PostPreview(props: PostPreviewProps) {
     description,
     imageUrl,
     date: dateString,
+    authorImageUrl
   } = props.post.metadata;
   const date = new Date(dateString);
   return (
@@ -39,10 +40,10 @@ export function PostPreview(props: PostPreviewProps) {
           {description}
         </p>
         <div className="flex items-center gap-4">
-          {/* <img
-            src={authorImage}
+          { <img
+            src={authorImageUrl}
             className="relative inline-block h-12 w-12 !rounded-full object-cover object-center"
-          /> */}
+          /> }
           <div>
             <p className="text-blue-gray-900 mb-0.5 block font-sans text-base font-light leading-relaxed antialiased">
               To do add author

@@ -129,3 +129,4 @@ function validateMetadata(metadata: unknown, fileName: string) {
   }
   return true;
 }
+

@@ -12,7 +12,8 @@ export function Post({ post }: PostProps) {
     slug,
     tags,
     imageUrl,
-    author
+    author,
+    authorImageUrl
   } = post.metadata;
   const date = new Date(dateString);
   return (
@@ -51,11 +52,11 @@ export function Post({ post }: PostProps) {
 
               {/* Author information */}
               <div className="mt-6 flex items-center">
-                {/* <img
+                {<img
                   className="h-10 w-10 rounded-full object-cover object-center"
-                  src={post.authorImage}
+                  src={authorImageUrl ? authorImageUrl : underdogLogo}
                   alt=""
-                /> */}
+                /> }
 
                 <div className="mx-4">
                   <h1 className="text-sm text-gray-700 dark:text-gray-200">

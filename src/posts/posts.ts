@@ -7,14 +7,14 @@ export type PostData = {
 };
 
 type Metadata = {
-  title: string;
   published: boolean;
+  title: string;
   description: string;
   date: string;
   slug: string;
   tags?: string[];
   imageUrl?: string;
-  author: string;
+  author?: string;
   authorImageUrl?: string;
 };
 
