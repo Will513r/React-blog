@@ -7,6 +7,7 @@ type PostPreviewProps = {
 };
 
 export function PostPreview(props: PostPreviewProps) {
+  console.log("entering PostPreview");
   const {
     title,
     tags,

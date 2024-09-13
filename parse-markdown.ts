@@ -140,22 +140,19 @@ function validateMetadata(metadata: unknown, fileName: string) {
     }
     if (typeof author !== "string") {
       throw new Error(
-        "\x1b[31mThe markdown must contain a valid author.	\x1b[0m",
+        "\x1b[31mThe markdown must contain a valid author.\x1b[0m",
       );
     }
+    if (typeof authorImage !== "string") {
+      throw new Error("\x1b[31mauthorImage must be a string\x1b[0m");
+    }
     if (
-      authorImage &&
       !authorImage.startsWith("http://") &&
       !authorImage.startsWith("https://") &&
       !authorImage.startsWith("/")
     ) {
       throw new Error(
         "\x1b[31mimageUrl must be an absolute URL or a path starting with /\nExample: /images/my-image.jpg for image in public folder\nOr: https://example.com/image.jpg for an external image\x1b[0m",
-      );
-    }
-    if (authorImage === null) {
-      throw new Error(
-        "\x1b[31mauthorImage must be a string must be a string\x1b[0m",
       );
     }
   } catch (error) {
