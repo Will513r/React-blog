@@ -7,12 +7,16 @@ type PostPreviewProps = {
 };
 
 export function PostPreview(props: PostPreviewProps) {
+  console.log("entering PostPreview");
   const {
     title,
     tags,
+    slug,
     published,
     description,
     imageUrl,
+    authorImage,
+    author,
     date: dateString,
   } = props.post.metadata;
   const date = new Date(dateString);
@@ -25,6 +29,9 @@ export function PostPreview(props: PostPreviewProps) {
           className="h-full w-full object-cover"
         />
       </div>
+      <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
+        {slug}
+      </p>
       <div className="p-6 px-2 sm:pl-4 sm:pr-6">
         <p className="mb-4 block font-sans text-sm font-light leading-normal text-inherit antialiased">
           Technology
@@ -35,20 +42,26 @@ export function PostPreview(props: PostPreviewProps) {
         >
           {title}
         </a>
+        <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
+          {tags}
+        </p>
         <p className="mb-8 block font-sans text-base font-normal leading-relaxed !text-gray-500 text-inherit antialiased">
           {description}
         </p>
         <div className="flex items-center gap-4">
-          {/* <img
-            src={authorImage}
+          <img
+            src={authorImage ? authorImage : underdogLogo}
             className="relative inline-block h-12 w-12 !rounded-full object-cover object-center"
-          /> */}
+          />
           <div>
             <p className="text-blue-gray-900 mb-0.5 block font-sans text-base font-light leading-relaxed antialiased">
-              To do add author
+              {author}
             </p>
             <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
               {date.toDateString()}
+            </p>
+            <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
+              {published}
             </p>
           </div>
         </div>

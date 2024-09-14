@@ -7,7 +7,7 @@ slug: understanding-typescript
 tags:
   - typescript
   - programming
-imageUrl: "/Chris.png"
+author: Christopher Forti
 ---
 
 # Content
